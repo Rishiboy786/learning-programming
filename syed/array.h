@@ -10,4 +10,21 @@ void arrprint(int arr[], int size)
     std::cout << "\n";
 }
 
+void arrswap(int arr[], int a, int b)
+{
+    int temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+}
+
+void arrreverse(int arr[], int size)
+{
+    size--;
+    for (int i = 0; i < (size) / 2; i++)
+    {
+        arrswap(arr, i, size - i);
+    }
+}
+
+
 #endif

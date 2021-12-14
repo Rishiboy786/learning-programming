@@ -19,17 +19,20 @@ void rotation(int arr[], int size)
     }
     arr[0] = temp;
 }
+
 void swap(int arr[], int a, int b)
 {
     int temp = arr[a];
     arr[a] = arr[b];
     arr[b] = temp;
 }
+
 void reverse(int arr[], int size)
 {
-    for (int i = 0; i < (size + 1) / 2; i++)
+    size--;
+    for (int i = 0; i < (size) / 2; i++)
     {
-        swap(arr, 0 + i, size - i);
+        swap(arr, i, size - i);
     }
 }
 
@@ -39,10 +42,8 @@ int main()
     int size = *(&arr+1) - arr;
     
     arrprint(arr, size);
-    rotation(arr, size);
+    reverse(arr,size);
     arrprint(arr, size);
-    //reverse(arr,5);
-    // arrprint(arr, size);
    
     
     return 0;
