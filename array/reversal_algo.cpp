@@ -30,7 +30,7 @@ void swap(int arr[], int a, int b)
 void reverse(int arr[], int size)
 {
     size--;
-    for (int i = 0; i < (size) / 2; i++)
+    for (int i = 0; i < (size+1) / 2; i++)
     {
         swap(arr, i, size - i);
     }
@@ -38,10 +38,12 @@ void reverse(int arr[], int size)
 
 int main()
 {
-    int arr[5] = {1, 2, 3, 4, 5};
+    int arr[6] = {1, 2, 3, 4, 5,6};
     int size = *(&arr+1) - arr;
     
     arrprint(arr, size);
+    reverse(arr, 3);
+    reverse(arr+3,size-3);
     reverse(arr,size);
     arrprint(arr, size);
    
