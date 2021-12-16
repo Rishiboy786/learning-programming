@@ -17,10 +17,23 @@ void strreverse(string &str)
     }
 }
 
+void palindrome(string str)
+{
+    string temp = str;
+    strreverse(temp);
+    if (temp == str)
+    {
+        cout << "yes";
+    }
+    else 
+    {
+        cout << "no";
+    }
+}
+
 int main()
 {
     string str;
     cin >> str;
-    strreverse(str);
-    cout << str << endl;
+    palindrome(str);
 }
